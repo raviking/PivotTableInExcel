@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<script>
+    function Download()
+    {
+        var ActionUri = "@Url.Content("~/Home/Export")";
+
+        //$.post(ActionUri, null, function (data) {
+
+        //    if (data == null || data=="")
+        //    {
+        //        debugger;
+        //        alert("No matching records found");
+        //    }
+        //    else
+        //    {
+        //        debugger;
+        //        window.location.href = data;
+        //    }
+
+        //});
+    }
+
+</script>
+@using (Html.BeginForm())
+{
+    <a class="btn btn-success" href='@Url.Action("Export","Home")'>download</a>
+}
